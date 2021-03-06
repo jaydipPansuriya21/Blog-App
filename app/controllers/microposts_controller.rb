@@ -27,7 +27,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.find_by_id(params[:id])
     redirect_to root_url if @micropost.nil?
   end
-  
+
   def micro_param
     params.require(:micropost).permit(:content)
   end
